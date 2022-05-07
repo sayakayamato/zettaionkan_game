@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+    <title>絶対音感テスト</title>
+</head>
+
+<body>
+    <div class="game__zentai">
+
+        <div class="start_button">
+            <button id="start">Let's Start!</button>
+        </div>
+
+        <div class="count first">
+            <p>time</p>
+            <h2 id="countDown">30</h2>
+        </div>
+
+        <div class="score first">
+            <p>score</p>
+            <h2 id="scoreUp">0</h2>
+        </div>
+
+        <div id="hantei">
+
+        </div>
+
+
+        <!-- 背景 -->
+        <div class="rains first">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+
+        <div class="keybord">
+            <div class="container first">
+                <div class="white_container">
+                    <div class="keys" id="keyC">
+                        <p>C</p>
+                    </div>
+                    <div class="keys" id="keyD">
+                        <p>D</p>
+                    </div>
+                    <div class="keys" id="keyE">
+                        <p>E</p>
+                    </div>
+                    <div class="keys" id="keyF">
+                        <p>F</p>
+                    </div>
+                    <div class="keys" id="keyG">
+                        <p>G</p>
+                    </div>
+                    <div class="keys" id="keyA">
+                        <p>A</p>
+                    </div>
+                    <div class="keys" id="keyB">
+                        <p>B</p>
+                    </div>
+                </div>
+                <div class="keysBlack" id="keyCC"></div>
+                <div class="keysBlack" id="keyDD"></div>
+                <div class="keysBlack" id="keyFF"></div>
+                <div class="keysBlack" id="keyGG"></div>
+                <div class="keysBlack" id="keyAA"></div>
+            </div>
+        </div>
+
+
+        <!-- 正解の効果音を格納しておく -->
+        <audio src="./audio/sekai__audio.mp3" id="seikai"></audio>
+        <!-- 不正解の効果音を格納しておく -->
+        <audio src="./audio/huseikai_audio.mp3" id="huseikai"></audio>
+        <!-- 終了時の効果音を格納しておく -->
+        <audio src="./audio/hoissuru.mp3" id="end"></audio>
+
+        <!-- モーダル本体 -->
+        <div class="modal_container">
+            <div class="modal_body">
+                <!-- 閉じるボタン -->
+                <div class="modal-close">×</div>
+                <!-- モーダル内のコンテンツ -->
+                <div class="modal_content">
+                    <p class="modal_content_p">文章が入ります。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
