@@ -44,25 +44,25 @@
         <div class="keybord">
             <div class="container first">
                 <div class="white_container">
-                    <div class="keys" id="keyC">
+                    <div class="keys none_keys" id="keyC">
                         <p>C</p>
                     </div>
-                    <div class="keys" id="keyD">
+                    <div class="keys none_keys" id="keyD">
                         <p>D</p>
                     </div>
-                    <div class="keys" id="keyE">
+                    <div class="keys none_keys" id="keyE">
                         <p>E</p>
                     </div>
-                    <div class="keys" id="keyF">
+                    <div class="keys none_keys" id="keyF">
                         <p>F</p>
                     </div>
-                    <div class="keys" id="keyG">
+                    <div class="keys none_keys" id="keyG">
                         <p>G</p>
                     </div>
-                    <div class="keys" id="keyA">
+                    <div class="keys none_keys" id="keyA">
                         <p>A</p>
                     </div>
-                    <div class="keys" id="keyB">
+                    <div class="keys none_keys" id="keyB">
                         <p>B</p>
                     </div>
                 </div>
@@ -82,14 +82,21 @@
         <!-- 終了時の効果音を格納しておく -->
         <audio src="./audio/hoissuru.mp3" id="end"></audio>
 
+        <audio src="./audio/background_music2.mp3" id="bgm"></audio>
+
+        <audio src="./audio/sta.mp3" id="start_audio"></audio>
+
         <!-- モーダル本体 -->
         <div class="modal_container">
             <div class="modal_body">
-                <!-- 閉じるボタン -->
-                <div class="modal-close">×</div>
                 <!-- モーダル内のコンテンツ -->
                 <div class="modal_content">
                     <p class="modal_content_p">文章が入ります。</p>
+                    <p class="score_level">文章が入ります。</p>
+                    <!-- <a href="./top_index.html"></a> -->
+                    <button id="return_button">結果表示へ</button>
+                    <p>Twitterでシェア</p>
+                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="音感テストをやってみたよ！" data-lang="ja" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
         </div>

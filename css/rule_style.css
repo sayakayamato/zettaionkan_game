@@ -1,3 +1,8 @@
+/* 画面フェードイン */
+body {
+	display: none;
+}
+
 
 .zentai{
     width: 1300px;
@@ -50,6 +55,10 @@
     top: 100px;
     left: 150px;
     
+}
+
+.key_left{
+    margin-left: 80px;
 }
 
 .key_title{

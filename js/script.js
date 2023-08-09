@@ -1,8 +1,16 @@
+///画面フェードイン
+$(function() {
+	$('body').fadeIn(1000); //1秒かけてフェードイン！
+});
 
 //カウントダウンタイマー
 let sec = 30;                       // カウントダウンする秒数
 
 const hoissuru = document.getElementById("end"); //開始・終了時の音
+
+const game_bgm = document.getElementById("bgm"); //BGM
+
+const startAudio = document.getElementById("start_audio");
 
 
 function startText(){
@@ -15,11 +23,13 @@ function startText(){
 
 
 $("#start").on("click", function(){
+    startAudio.play();
     $(".start_button").hide();
     $(".count, .score, .rains, .container").removeClass("first");
     startText();
     setTimeout(function(){
         hoissuru.play();
+        game_bgm.play();
     },2000);
     setTimeout(function(){
         $("#hantei").text(" ");
@@ -45,7 +55,21 @@ $("#start").on("click", function(){
         hoissuru.play();
         const score_modal = function(){
             $(".modal_container").addClass('active');
-            $(".modal_content_p").html("あなたの得点は" + score + "点です！");
+            $(".modal_content_p").html("あなたの得点は<span>"+ score + "</span>点です！");
+            if(score<10){
+                $(".score_level").html("< 音感センスなし〜 >");
+            }else if(score<15){
+                $(".score_level").html("< まあ普通かな >");
+            }else if(score<20){
+                $(".score_level").html("< なかなかやるやん >");
+            }
+            else if(score<25){
+                $(".score_level").html("< 音感センスあり！ >");
+            }
+            else if(score<30){
+                $(".score_level").html("< お主、只者ではないな >");
+            }
+            else{$(".score_level").html("< 神すぎる！>");}
             return false;
         };
         setTimeout(score_modal, 3000);                      //finishしてから3秒後にモーダル表示  
@@ -56,7 +80,7 @@ $("#start").on("click", function(){
 
 //スコア
 let score = 0;
-// let viewScoore = document.querySelector(".score");
+
 
 
 
@@ -74,9 +98,7 @@ const button = document.getElementById('button'),
 
 const audio = new Audio()
 
-// button.addEventListener('click', function () {
-//     playAudio();
-// }, false);    //このfalseとは？
+
 
 
 
@@ -98,6 +120,7 @@ const playAudio = function () {
     function seikaiText(){
         $("#hantei").text("◯正解！");
         setTimeout(function(){
+            $(".keys").removeClass("active_keys");
             $("#hantei").text(" ");
         },1000);
     };
@@ -105,6 +128,7 @@ const playAudio = function () {
     function huseikaiText(){
         $("#hantei").text("×不正解...");
         setTimeout(function(){
+            $(".keys").removeClass("active_keys");
             $("#hantei").text(" ");
         },1000);
     };
@@ -118,6 +142,8 @@ const playAudio = function () {
                     audio.play();
                     seikaiPlay.play();
                     seikaiText();
+                    $("#keyC").removeClass("none_keys");
+                    $("#keyC").addClass("active_keys");
                     score+=2;
                     $("#scoreUp").text(score);
                     $(window).off();
@@ -138,6 +164,8 @@ const playAudio = function () {
                     audio.play();
                     seikaiPlay.play();
                     seikaiText();
+                    $("#keyD").removeClass("none_keys");
+                    $("#keyD").addClass("active_keys");
                     score+=2;
                     $("#scoreUp").text(score);
                     $(window).off();
@@ -158,6 +186,8 @@ const playAudio = function () {
                     audio.play();
                     seikaiPlay.play();
                     seikaiText();
+                    $("#keyE").removeClass("none_keys");
+                    $("#keyE").addClass("active_keys");
                     score+=2;
                     $("#scoreUp").text(score);
                     $(window).off();
@@ -178,6 +208,8 @@ const playAudio = function () {
                     audio.play();
                     seikaiPlay.play();
                     seikaiText();
+                    $("#keyF").removeClass("none_keys");
+                    $("#keyF").addClass("active_keys");
                     score+=2;
                     $("#scoreUp").text(score);
                     $(window).off();
@@ -198,6 +230,8 @@ const playAudio = function () {
                     audio.play();
                     seikaiPlay.play();
                     seikaiText();
+                    $("#keyG").removeClass("none_keys");
+                    $("#keyG").addClass("active_keys");
                     score+=2;
                     $("#scoreUp").text(score);
                     $(window).off();
@@ -218,6 +252,8 @@ const playAudio = function () {
                     audio.play();
                     seikaiPlay.play();
                     seikaiText();
+                    $("#keyA").removeClass("none_keys");
+                    $("#keyA").addClass("active_keys");
                     score+=2;
                     $("#scoreUp").text(score);
                     $(window).off();
@@ -238,6 +274,8 @@ const playAudio = function () {
                     audio.play();
                     seikaiPlay.play();
                     seikaiText();
+                    $("#keyB").removeClass("none_keys");
+                    $("#keyB").addClass("active_keys");
                     score+=2;
                     $("#scoreUp").text(score);
                     $(window).off();
@@ -301,3 +339,4 @@ $(window).on("keydown",function(e){
         audio.play();
     }
 }); 
+

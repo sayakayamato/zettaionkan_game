@@ -1,3 +1,9 @@
+/* 画面フェードイン */
+body {
+	display: none;
+}
+
+
 .game__zentai{
     width: 1300px;
     height: 700px;
@@ -124,6 +130,24 @@
     text-align: center;
     line-height: 150px;
     position: relative;
+}
+
+.none_keys{
+    background-color: rgb(246, 246, 246);
+}
+
+.active_keys{
+    background-color: rgb(243, 139, 104);
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 50px rgb(255, 227, 90),
+        0 0 50px rgb(255, 227, 90),
+        0 0 50px rgb(255, 227, 90),
+        0 0 50px rgb(255, 227, 90),
+        0 0 50px rgb(255, 227, 90);
 }
 
 .first{
@@ -382,24 +406,50 @@
 	vertical-align: middle;
 	max-width: 500px;
 	width: 90%;
+    box-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px rgb(172, 151, 44),
+        0 0 82px rgb(172, 151, 44),
+        0 0 92px rgb(172, 151, 44),
+        0 0 102px rgb(172, 151, 44),
+        0 0 151px rgb(172, 151, 44);
 }
-/*モーダルを閉じるボタンの指定*/
-.modal_close{
-	position: absolute;
-	display: flex;
-    align-items: center;
-    justify-content: center;
-	top: -40px;
-	right: -40px;
-	width: 40px;
-	height: 40px;
-	font-size: 40px;
-	color: #fff;
-	cursor: pointer;
-}
+
 /*モーダル内のコンテンツの指定*/
 .modal_content{
 	background: #fff;
-	text-align: left;
+	text-align: center;
 	padding: 30px;
 }
+
+.modal_content_p{
+    font-size: 20px;
+}
+
+.modal_content_p span{
+    font-size: 50px;
+}
+
+.score_level{
+    font-size: 30px;
+    
+}
+
+#return_button{
+    width: 200px;
+    height: 70px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: #122452;
+    background-color: rgb(248, 225, 98);
+}
+
+#return_button:hover{
+    cursor: pointer;
+    background-color:gold
+}
+
+
+
