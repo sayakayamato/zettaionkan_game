@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+    <title>絶対音感テスト</title>
+</head>
+
+<body>
+    <div class="game__zentai">
+
+        <div class="start_button">
+            <button id="start">Let's Start!</button>
+        </div>
+
+        <div class="count first">
+            <p>time</p>
+            <h2 id="countDown">30</h2>
+        </div>
+
+        <div class="score first">
+            <p>score</p>
+            <h2 id="scoreUp">0</h2>
+        </div>
+
+        <div id="hantei">
+
+        </div>
+
+
+        <!-- 背景 -->
+        <div class="rains first">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+
+        <div class="keybord">
+            <div class="container first">
+                <div class="white_container">
+                    <div class="keys none_keys" id="keyC">
+                        <p>C</p>
+                    </div>
+                    <div class="keys none_keys" id="keyD">
+                        <p>D</p>
+                    </div>
+                    <div class="keys none_keys" id="keyE">
+                        <p>E</p>
+                    </div>
+                    <div class="keys none_keys" id="keyF">
+                        <p>F</p>
+                    </div>
+                    <div class="keys none_keys" id="keyG">
+                        <p>G</p>
+                    </div>
+                    <div class="keys none_keys" id="keyA">
+                        <p>A</p>
+                    </div>
+                    <div class="keys none_keys" id="keyB">
+                        <p>B</p>
+                    </div>
+                </div>
+                <div class="keysBlack" id="keyCC"></div>
+                <div class="keysBlack" id="keyDD"></div>
+                <div class="keysBlack" id="keyFF"></div>
+                <div class="keysBlack" id="keyGG"></div>
+                <div class="keysBlack" id="keyAA"></div>
+            </div>
+        </div>
+
+
+        <!-- 正解の効果音を格納しておく -->
+        <audio src="./audio/sekai__audio.mp3" id="seikai"></audio>
+        <!-- 不正解の効果音を格納しておく -->
+        <audio src="./audio/huseikai_audio.mp3" id="huseikai"></audio>
+        <!-- 終了時の効果音を格納しておく -->
+        <audio src="./audio/hoissuru.mp3" id="end"></audio>
+
+        <audio src="./audio/background_music2.mp3" id="bgm"></audio>
+
+        <audio src="./audio/sta.mp3" id="start_audio"></audio>
+
+        <!-- モーダル本体 -->
+        <div class="modal_container">
+            <div class="modal_body">
+                <!-- モーダル内のコンテンツ -->
+                <div class="modal_content">
+                    <p class="modal_content_p">文章が入ります。</p>
+                    <p class="score_level">文章が入ります。</p>
+                    <!-- <a href="./top_index.html"></a> -->
+                    <button id="return_button">結果表示へ</button>
+                    <p>Twitterでシェア</p>
+                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="音感テストをやってみたよ！" data-lang="ja" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

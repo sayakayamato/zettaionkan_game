@@ -45,6 +45,6 @@ $(window).on('load', function () {
     $("#button").on("click",function(){
         buttonAudio.play();
         setTimeout(function(){
-            window.location.href = "index.html"
+            window.location.href = "main.html"
         },800);
     });
